@@ -4,18 +4,10 @@
 
 - 하위 모듈들의 import와 다운로드, 링크, 실행이 이뤄진 후, 메인 모듈이 실행됩니다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b56971bf-0b49-402d-a9f1-7fcbadccc128/Untitled.png)
+![image](https://user-images.githubusercontent.com/94776135/213870023-bc9f9d60-26b5-4676-899a-b173e6a343f8.png)
 
 - 다음과 같이 실행한 결과입니다.
   - `script.js` : 메인 모듈
-      <aside>
-      👉 console.log(cart)
-      
-      해당 함수 스코프의 변수환경을 확인할 수 있습니다.(클로저)
-      import한 cart는 exports의 cart와 link되었기 때문에,  이후에 바뀐 값을 알아볼 수 있습니다.
-      
-      </aside>
-      
       ```tsx
       import { addToCart, cart } from "./shoppingCart.js"; 
       // a. import하고 download합니다.
@@ -38,6 +30,12 @@
       		// 이후에 바뀐 값을 알아볼 수 있습니다.
       );
       ```
+      ```
+      👉 console.log(cart)
+      
+      해당 함수 스코프의 변수환경을 확인할 수 있습니다.(클로저)
+      import한 cart는 exports의 cart와 link되었기 때문에,  이후에 바뀐 값을 알아볼 수 있습니다.
+      ```
 
   - `shoppingCart.js` : 하위 모듈
     ```jsx
@@ -56,7 +54,7 @@
     // d. 하위 모듈이 실행됩니다. 현재 cart는 []입니다.
     console.log("exporting - import한 모듈과 link");
     ```
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5905eb0b-71ce-4888-ab52-55c0d0f15b91/Untitled.png)
+    ![image](https://user-images.githubusercontent.com/94776135/213870053-e44a1b87-bab8-4d40-b10b-e774b1684f40.png)
 - import 변수명을 바꿀 수 있습니다.
   ```tsx
   import { addToCart as 더하기, cart as 바구니 } from "./shoppingCart.js";
