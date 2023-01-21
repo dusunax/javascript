@@ -28,8 +28,6 @@ ES6는 JavaScript의 새로운 버전으로, 많은 새로운 기능과 개선�
 | transplier : babel |
 | production         | 빌딩 프로세스가 완료된 JavaScript 번들 |                               |
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4714ce6f-57fa-46ec-807b-e7b7711ba9ae/Untitled.png)
-
 ### Module은?
 
 - 재사용 가능한 코드 & 코드를 캡슐화합니다.
