@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>javascript</title>
+    <script src="https://cdn.jsdelivr.net/npm/showdown/dist/showdown.min.js"></script>
+    <style>
+      #md-content {
+        width: 100%;
+        max-width: 1200px;
+
+        padding: 0 1rem;
+        margin: 0 auto;
+
+        color: #222;
+
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="md-content"></div>
+    <script>
+      fetch("README.md")
+        .then((response) => response.text())
+        .then((md) => {
+          var converter = new showdown.Converter();
+          document.querySelector("#md-content").innerHTML =
+            converter.makeHtml(md);
+        });
+    </script>
+  </body>
+</html>
