@@ -9,7 +9,7 @@
 ### 일자별 정리
 
 #### 노션 링크
-[230121 - ES6, ES2022](https://dusunax.notion.site/part-3-1433b3153d4f473f8944bbfae87839b6)
+[230121~22 - ES6, ES2022, ModulePattern](https://dusunax.notion.site/part-3-1433b3153d4f473f8944bbfae87839b6)
 
 ---
 
