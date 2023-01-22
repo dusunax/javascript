@@ -75,3 +75,5 @@ ShoppingCart.orderStock(); // 아이템 주문
 console.log(ShoppingCart.totalQty); // 아이템: 0개
 ```
 
+![image](https://user-images.githubusercontent.com/94776135/213924288-9561f5db-74e8-44eb-b5dd-26a65016d1cd.png)
+
