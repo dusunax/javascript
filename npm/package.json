@@ -1,0 +1,17 @@
+{
+  "name": "npm-example",
+  "version": "1.0.0",
+  "description": "npm-example",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "author": "dusunax",
+  "license": "ISC",
+  "dependencies": {
+    "lodash-es": "^4.17.21"
+  },
+  "devDependencies": {
+    "parcel": "^2.8.3"
+  }
+}
