@@ -46,3 +46,26 @@ if (wrap.childNodes.length === 0) {
 if (module.hot) {
   module.hot.accept();
 }
+
+// 트랜스파일링 transpilling
+// ES6 기능
+class Person {
+  greeting = "안녕";
+  constructor(name) {
+    this.name = name;
+    console.log(`${this.name} ${this.greeting}`);
+  }
+}
+const 홍길동 = new Person("홍길동");
+
+console.log("홍길동" ?? null);
+console.log(state.cart.find((e) => e.product === "꽁치찌개"));
+Promise.resolve("테스트").then((e) => console.log(e));
+
+// 폴리필링 & 라이브러리 polyfilling
+// import "core-js"; // 전체 라이브러리
+import "core-js/features/array/find"; // Array.prototype.find()
+import "core-js/features/promise"; // Promise
+
+// polifilling async function
+import "regenerator-runtime";
