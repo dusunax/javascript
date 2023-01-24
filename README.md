@@ -11,7 +11,8 @@
 #### 노션 링크
 
 - [230121~22 - ES6, ES2022, ModulePattern](https://dusunax.notion.site/part-3-1433b3153d4f473f8944bbfae87839b6)
-- [230123 - npm & dependencies & parcel](https://dusunax.notion.site/part-4-5660e8240227452d84eed2b87e05950a)
+- [230123 - NPM & dependencies와 Parcel](https://dusunax.notion.site/part-4-5660e8240227452d84eed2b87e05950a)
+- [230124 - Babel 그리고 Transfiling & Polyfilling](https://dusunax.notion.site/part-5-1d44444ab215444e83899df8f1855416)
 
 ---
 
@@ -30,6 +31,10 @@
 
 - [Module Pattern이란?](https://github.com/dusunax/javascript/blob/main/docs/ModulePattern.md)
 
-#### npm & dependencies & parcel
+#### npm & dependencies & Parcel
 
-- [npm & dependencies & parcel](https://github.com/dusunax/javascript/blob/main/docs/npm%26dependency.md)
+- [NPM & dependencies와 Parcel](https://github.com/dusunax/javascript/blob/main/docs/npm%26dependency.md)
+
+#### Babel, Transfiling & Polyfilling
+
+- [Babel 그리고 Transfiling & Polyfilling](https://github.com/dusunax/javascript/blob/main/docs/npm%26dependency.md)
