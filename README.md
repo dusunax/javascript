@@ -30,6 +30,10 @@
 
 - [Module Pattern이란?](https://github.com/dusunax/javascript/blob/main/docs/ModulePattern.md)
 
-#### npm & dependencies & parcel
+#### npm & dependencies & Parcel
 
-- [npm & dependencies & parcel](https://github.com/dusunax/javascript/blob/main/docs/npm%26dependency.md)
+- [NPM & dependencies와 Parcel](https://github.com/dusunax/javascript/blob/main/docs/npm%26dependency.md)
+
+#### Babel, Transfiling & Polyfilling
+
+- [Babel 그리고 Transfiling & Polyfilling](https://github.com/dusunax/javascript/blob/main/docs/npm%26dependency.md)
