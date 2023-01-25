@@ -13,6 +13,7 @@
 - [230121~22 - ES6, ES2022, ModulePattern](https://dusunax.notion.site/part-3-1433b3153d4f473f8944bbfae87839b6)
 - [230123 - NPM & dependencies와 Parcel](https://dusunax.notion.site/part-4-5660e8240227452d84eed2b87e05950a)
 - [230124 - Babel 그리고 Transfiling & Polyfilling](https://dusunax.notion.site/part-5-1d44444ab215444e83899df8f1855416)
+- [230125 - CORS, SOP and Preflight & Simple & Credentialed Request](https://dusunax.notion.site/CORS-37380813b8034c68836d818fd27a05ea)
 
 ---
 
@@ -38,3 +39,8 @@
 #### Babel, Transfiling & Polyfilling
 
 - [Babel 그리고 Transfiling & Polyfilling](https://github.com/dusunax/javascript/blob/main/docs/npm%26dependency.md)
+
+#### CORS, SOP and Preflight & Simple & Credentialed Request
+
+- [CORS란?](https://github.com/dusunax/javascript/blob/main/docs/CORS.md)
+
