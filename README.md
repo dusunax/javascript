@@ -38,7 +38,7 @@
 
 #### Babel, Transfiling & Polyfilling
 
-- [Babel 그리고 Transfiling & Polyfilling](https://github.com/dusunax/javascript/blob/main/docs/npm%26dependency.md)
+- [Babel 그리고 Transfiling & Polyfilling](https://github.com/dusunax/javascript/blob/main/docs/babel-transpiling%26polyfilling.md)
 
 #### CORS, SOP and Preflight & Simple & Credentialed Request
 
