@@ -1,7 +1,7 @@
 # javascript 🌱
 
 ```
-뼈와 살이되는 자바스크립트 공부
+뼈와 살이되는 CS & 자바스크립트 공부
 ```
 
 ---
@@ -14,6 +14,7 @@
 - [230123 - NPM & dependencies와 Parcel](https://dusunax.notion.site/part-4-5660e8240227452d84eed2b87e05950a)
 - [230124 - Babel 그리고 Transfiling & Polyfilling](https://dusunax.notion.site/part-5-1d44444ab215444e83899df8f1855416)
 - [230125 - CORS, SOP and Preflight & Simple & Credentialed Request](https://dusunax.notion.site/CORS-37380813b8034c68836d818fd27a05ea)
+- [230406 - SSH keys & SSH Forwarding](https://dusunax.notion.site/CS-SSH-keys-76d0014cfa684e8d855f6fef0e131aaa)
 
 ---
 
@@ -44,3 +45,6 @@
 
 - [CORS란?](https://github.com/dusunax/javascript/blob/main/docs/CORS.md)
 
+#### SSH Key 사용하기
+
+- [SSH keys & SSH Forwarding](https://github.com/dusunax/javascript/blob/main/docs/SHH-keys.md)
