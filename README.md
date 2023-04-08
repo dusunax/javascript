@@ -22,16 +22,16 @@
 
 #### ES6
 
-- [ES6-module_import](https://github.com/dusunax/javascript/blob/main/docs/ES6-module_import.md)
-- [ES6-import&export_example](https://github.com/dusunax/javascript/blob/main/docs/ES6-import%26export_example.md)
+- [ES6-module_import](https://github.com/dusunax/javascript/blob/main/docs/ES6-module-import.md)
+- [ES6-import&export_example](https://github.com/dusunax/javascript/blob/main/docs/ES6-import%26export-example.md)
 
 #### ES2022
 
-- [ES2022-topLevelAwait&ArrayAt](https://github.com/dusunax/javascript/blob/main/docs/ES2022-topLevelAwait%26ArrayAt.md)
+- [ES2022-topLevelAwait&ArrayAt](https://github.com/dusunax/javascript/blob/main/docs/ES2022-top-level-await%26array-at)
 
 #### Module Pattern
 
-- [Module Pattern이란?](https://github.com/dusunax/javascript/blob/main/docs/ModulePattern.md)
+- [Module Pattern이란?](https://github.com/dusunax/javascript/blob/main/docs/module-pattern.md)
 
 #### npm & dependencies & Parcel
 
