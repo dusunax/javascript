@@ -1,6 +1,6 @@
 ## BFS 구현하기 (feat. BST란?)
 
-- ![Data Structures: Trees-traversals] [https://replit.com/@aneagoie/Data-Structures-Trees-traversals-bfs#index.js](https://replit.com/@aneagoie/Data-Structures-Trees-traversals-bfs#index.js)
+- [Data Structures: Trees-traversals] [https://replit.com/@aneagoie/Data-Structures-Trees-traversals-bfs#index.js](https://replit.com/@aneagoie/Data-Structures-Trees-traversals-bfs#index.js)
 
 ```tsx
 Binary Search Tree, BST:
