@@ -85,7 +85,6 @@ breadthFirstSearch(tree.root, [])
 - 아래는 이진 트리에서 **`currentNode.left`**를 시각적으로 표현한 예시입니다:
 
   ```
-  mathematicaCopy code
           A
          / \
         B   C
@@ -112,7 +111,6 @@ breadthFirstSearch(tree.root, [])
 - 아래는 이진 트리에서 **`currentNode.right`**를 시각적으로 표현한 예시입니다:
 
   ```
-  mathematicaCopy code
           A
          / \
         B   C
@@ -134,4 +132,4 @@ breadthFirstSearch(tree.root, [])
 
 ---
 
-NextPage
+[NextPage](https://github.com/dusunax/javascript/blob/main/docs/BFS&DFS-02.md)
