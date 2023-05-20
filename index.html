@@ -7,11 +7,6 @@
     <title>javascript</title>
     <script src="https://cdn.jsdelivr.net/npm/showdown/dist/showdown.min.js"></script>
 
-    <link rel="stylesheet" href="https://unpkg.com/mvp.css@1.12/mvp.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
     <style>
       #md-content {
         width: 100%;
@@ -28,6 +23,7 @@
   </head>
   <body>
     <div id="md-content"></div>
+
     <script>
       fetch("README.md")
         .then((response) => response.text())
@@ -37,5 +33,7 @@
             converter.makeHtml(md);
         });
     </script>
+
+    <script src="https://dusunax.github.io/javascript/assets/js/mvp.js"></script>
   </body>
 </html>
