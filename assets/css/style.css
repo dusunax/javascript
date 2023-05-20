@@ -1,0 +1,7 @@
+:root {
+  --justify-important: flex-start;
+}
+
+section {
+  padding: 0 2rem;
+}
