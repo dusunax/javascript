@@ -23,6 +23,10 @@
 
 `(공부일자 역순)`
 
+#### Blob, ArrayBuffer, TypedArray
+
+- [File: Blob, ArrayBuffer, TypedArray(Uint8Array)](https://github.com/dusunax/javascript/blob/main/docs/blob_file_array-buffer.md)
+
 #### 알고리즘 공부
 
 - [알고리즘 공부 메인](https://dusunax.github.io/javascript/algorithms)
