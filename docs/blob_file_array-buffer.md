@@ -1,8 +1,8 @@
 # File: Blob, ArrayBuffer, TypedArray(Uint8Array)
 
 > **목표**: 이미지 File을 좀 더 제대로 알고 다뤄보자✨  
-> **개요**: 웹 어플리케이션에서 파일을 다루는데 사용되는 개념인 Blob, ArrayBuffer, Binary Data에 대해 알아보겠습니다. 파일 처리, 데이터 전송, 이미지 처리에 사용되는 개념입니다.  
-> 
+> **개요**: 웹 어플리케이션에서 파일을 다루는데 사용되는 개념인 Blob, ArrayBuffer, Binary Data에 대해 알아보겠습니다. 파일 처리, 데이터 전송, 이미지 처리에 사용되는 개념입니다.
+>
 > **0. 벨로그 포스트**: [File: Blob, ArrayBuffer, TypedArray(Uint8Array)](https://velog.io/@dusunax/File-Blob-ArrayBuffer-TypedArrayUint8Array)
 >
 > **1. CodeSandbox 실험** > [https://codesandbox.io/s/unit8array-raw-binary-data-buffer-z3ki4q?file=/src/form/Form.jsx:275-694](https://codesandbox.io/s/unit8array-raw-binary-data-buffer-z3ki4q?file=/src/form/Form.jsx:275-694)
@@ -139,7 +139,7 @@ arrayBuffer는 `ArrayBuffer`객체를 반환하는 Promise를 반환하는 **비
 
 ---
 
-# 3. file 주시구요, meta data는 빼주세요.
+# 3. file 주시구요, binary data로 주세요.
 
 > 🥪 안 드시는 야채 있으세요?
 >
