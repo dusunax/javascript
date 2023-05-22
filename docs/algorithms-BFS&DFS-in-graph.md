@@ -30,4 +30,4 @@
 
 ---
 
-NextPage
+[NextPage](https://github.com/dusunax/javascript/blob/main/docs/algorithms-shortest-path.md)
