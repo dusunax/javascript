@@ -31,10 +31,10 @@
 
 - [알고리즘 공부 메인](https://dusunax.github.io/javascript/algorithms)
 - [Algorithms: 동적 프로그래밍, Dynamic Programming](https://github.com/dusunax/javascript/blob/main/docs/algorithms-dyanmic-programming.md)
-- [Algorithms: 이진 트리 탐색하기, BFS & DFS](https://github.com/dusunax/javascript/blob/main/docs/BFS&DFS-start.md)
-- [Algorithms: BFS 구현하기 (feat. BST란?)](https://github.com/dusunax/javascript/blob/main/docs/BFS&DFS-01.md)
+- [Algorithms: 이진 트리 탐색하기, BFS & DFS](https://github.com/dusunax/javascript/blob/main/docs/algorithms-BFS&DFS-start.md)
+- [Algorithms: BFS 구현하기 (feat. BST란?)](https://github.com/dusunax/javascript/blob/main/docs/algorithms-BFS&DFS-01.md)
 
-- [Algorithms: DFS, 깊이 우선 탐색: 순회 방식 알아보기](https://github.com/dusunax/javascript/blob/main/docs/BFS&DFS-02.md)
+- [Algorithms: DFS, 깊이 우선 탐색: 순회 방식 알아보기](https://github.com/dusunax/javascript/blob/main/docs/algorithms-BFS&DFS-02.md)
 
 #### SSH Key 사용하기
 

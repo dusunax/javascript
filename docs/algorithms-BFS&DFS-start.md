@@ -37,4 +37,4 @@
 
 ---
 
-[NextPage](https://github.com/dusunax/javascript/blob/main/docs/BFS&DFS-01.md)
+[NextPage](https://github.com/dusunax/javascript/blob/main/docs/algorithms-BFS&DFS-01.md)

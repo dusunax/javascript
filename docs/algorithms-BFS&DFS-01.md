@@ -132,4 +132,4 @@ breadthFirstSearch(tree.root, [])
 
 ---
 
-[NextPage](https://github.com/dusunax/javascript/blob/main/docs/BFS&DFS-02.md)
+[NextPage](https://github.com/dusunax/javascript/blob/main/docs/algorithms-BFS&DFS-02.md)

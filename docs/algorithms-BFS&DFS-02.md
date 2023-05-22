@@ -211,4 +211,4 @@ function **traversePostOrder**(node, list) {
 
 ---
 
-NextPage
+[NextPage](https://github.com/dusunax/javascript/blob/main/docs/algorithms-BFS&DFS-in-graph.md)
