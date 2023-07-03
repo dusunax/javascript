@@ -144,3 +144,7 @@ BFS는 가중치를 처리할 수 없지만, 정점과 간선의 수에 비례�
   const shortestDistances = bellmanFord(graph, startVertex);
   console.log("최단 거리 배열:", shortestDistances); // 최단 거리 배열: [0, 4, 3, 5, 6]
   ```
+
+---
+
+Next
