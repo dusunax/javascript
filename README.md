@@ -23,6 +23,10 @@
 
 `(공부일자 역순)`
 
+#### 웹 그래픽
+
+- [웹 그래픽이란? (WebGL & OpenGL, WebGPU)](https://github.com/dusunax/javascript/blob/main/docs/web-graphic.md)
+
 #### Blob, ArrayBuffer, TypedArray
 
 - [File: Blob, ArrayBuffer, TypedArray(Uint8Array)](https://github.com/dusunax/javascript/blob/main/docs/blob_file_array-buffer.md)
