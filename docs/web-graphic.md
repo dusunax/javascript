@@ -14,12 +14,11 @@
 > 4. OpenGL: https://registry.khronos.org/OpenGL-Refpages/es2.0/xhtml/
 > 5. WebGPU: https://www.youtube.com/watch?v=m6T-Mq1BPXg  
 >    https://developer.chrome.com/blog/webgpu-release/ > https://developer.mozilla.org/en-US/docs/Web/API/WebGPU_API
-> 6. WebGL & WebGPU 관련 라이브러리
-
-    - spline https://spline.design/
-    - Three.js https://threejs.org/
-    - Babylon.js https://www.babylonjs.com/
-    - (ML) Tensorflow https://www.tensorflow.org/js?hl=ko
+> 6. WebGL & WebGPU 관련 라이브러리  
+    - spline https://spline.design/  
+    - Three.js https://threejs.org/  
+    - Babylon.js https://www.babylonjs.com/  
+    - (ML) Tensorflow https://www.tensorflow.org/js?hl=ko  
 
 # 1. 웹 그래픽에 대해서 🖼
 
@@ -136,7 +135,7 @@ WebGL을 계승하여, 웹에서 Vulkan, Metal, DirectX 12와 같은 모던 API�
 
 > 그 외의 자세한 추가 및 변화 내용은 [Google Chrome Developers](https://www.youtube.com/@ChromeDevs) 로!
 
-- 2023 ecosystem
+- 2023 ecosystem  
   ![](https://velog.velcdn.com/images/dusunax/post/7e969c28-d7e2-48a2-9ed4-ed43ad9f7903/image.png)
 - WebGPU 샘플 확인하기
   https://webgpu.github.io/webgpu-samples/samples/helloTriangle
