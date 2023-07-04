@@ -23,6 +23,10 @@
 
 `(공부일자 역순)`
 
+#### 기초 개념
+
+- [자투리 공부👉(CRDT, RPC, WASM)](https://github.com/dusunax/javascript/blob/main/docs/CRDT-RPC-WASM.md)
+
 #### 웹 그래픽
 
 - [웹 그래픽이란? (WebGL & OpenGL, WebGPU)](https://github.com/dusunax/javascript/blob/main/docs/web-graphic.md)
