@@ -25,8 +25,8 @@
 
 #### 개념 채우기
 
-- [자투리 공부👉(CRDT, RPC, WASM)](https://github.com/dusunax/javascript/blob/main/docs/CRDT-RPC-WASM.md)
 - [자투리 공부👉(Deep Link)](https://github.com/dusunax/javascript/blob/main/docs/deep-link.md)
+- [자투리 공부👉(CRDT, RPC, WASM)](https://github.com/dusunax/javascript/blob/main/docs/CRDT-RPC-WASM.md)
 
 #### 웹 그래픽
 
