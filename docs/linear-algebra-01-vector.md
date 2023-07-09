@@ -29,7 +29,7 @@
 
 - 좌표계 위 벡터의 덧셈
 
-<img src="https://github.com/dusunax/javascript/assets/94776135/a7b8b5ec-4cca-4383-a791-239ef5333ba3" width="400px">
+<img src="https://github.com/dusunax/javascript/assets/94776135/a7b8b5ec-4cca-4383-a791-239ef5333ba3" width="400px">  
 <img src="https://github.com/dusunax/javascript/assets/94776135/25b139d5-6853-4f8d-adda-0e2225cb664b" width="400px">
 
 ### 상수배 Multification by number
