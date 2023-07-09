@@ -1,5 +1,5 @@
 > 레퍼런스
-> Deep Link: https://en.wikipedia.org/wiki/Deep_linking
+> Deep Link: https://en.wikipedia.org/wiki/Deep_linking  
 > Slack: https://api.slack.com/reference/deep-linking
 
 | 목표     | 웹개발 개념들에 대해서 간단히 알아보자. |
@@ -34,9 +34,8 @@ scheme://host/path?query_parameters
 
 ### 사용 예시: 슬랙
 
-https://api.slack.com/reference/deep-linking
-
-<a href="slack://open"><button>슬랙 열기</button></a>
+- https://api.slack.com/reference/deep-linking
+- `<a href="slack://open">슬랙 열기</a>`
 
 ### 커스텀 URI 프로토콜
 

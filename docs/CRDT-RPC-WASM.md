@@ -102,7 +102,7 @@ WASM을 사용하여 웹 애플리케이션에서 **높은 성능이 필요한 �
      해당 언어의 도구 또는 컴파일러를 사용하여 WASM 모듈 파일(.wasm)을 생성합니다.
 2. JavaScript에서 WASM 모듈 로드
 
-   - **`WebAssembly.instantiate()`** 또는 **`WebAssembly.instantiateStreaming()`** 함수를 사용하여 WASM 모듈을 로드합니다. 이 함수들은 WASM 모듈 파일을 가져와 메모리에 로드하고, JavaScript와의 상호작용을 위한 인스턴스를 생성합니다.
+   - `WebAssembly.instantiate()` 또는 `WebAssembly.instantiateStreaming()` 함수를 사용하여 WASM 모듈을 로드합니다. 이 함수들은 WASM 모듈 파일을 가져와 메모리에 로드하고, JavaScript와의 상호작용을 위한 인스턴스를 생성합니다.
 
    ```tsx
    // WASM 모듈 로드
@@ -120,4 +120,4 @@ WASM을 사용하여 웹 애플리케이션에서 **높은 성능이 필요한 �
      });
    ```
 
-   - 위의 예시에서는 **`fetch()`** 함수를 사용하여 WASM 모듈 파일을 가져온 다음, **`arrayBuffer()`**를 사용하여 데이터를 배열 버퍼로 변환합니다. 그 후, **`WebAssembly.instantiate()`** 함수를 호출하여 WASM 모듈을 로드하고 인스턴스를 생성합니다. 마지막으로, 해당 모듈의 함수를 호출하여 결과를 얻고, 콘솔에 출력합니다.
+   - 위의 예시에서는 `fetch()` 함수를 사용하여 WASM 모듈 파일을 가져온 다음, `arrayBuffer()`를 사용하여 데이터를 배열 버퍼로 변환합니다. 그 후, `WebAssembly.instantiate()` 함수를 호출하여 WASM 모듈을 로드하고 인스턴스를 생성합니다. 마지막으로, 해당 모듈의 함수를 호출하여 결과를 얻고, 콘솔에 출력합니다.
