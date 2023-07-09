@@ -1,10 +1,10 @@
-# 선형대수학 Linear algebra 01
+# 선형 대수학 Linear algebra 01
 
 ## Vector란?
 
 > 강의: https://www.youtube.com/watch?v=fNk_zzaMoSs&list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab
 
-선형대수학 Linear algebra은 컴퓨터 과학, 물리학, 전기 공학, 기계 공학, 통계학 등 다양한 분야에서 사용됩니다.
+선형 대수학 Linear algebra은 컴퓨터 과학, 물리학, 전기 공학, 기계 공학, 통계학 등 다양한 분야에서 사용됩니다.
 
 |           | Geometric Intuition             | Numeric Operations                 |
 | --------- | ------------------------------- | ---------------------------------- |
