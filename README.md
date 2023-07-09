@@ -23,6 +23,10 @@
 
 `(공부일자 역순)`
 
+#### 선형 대수학 Linear Algebra
+
+- [선형대수학: Vector란?](https://github.com/dusunax/javascript/blob/main/docs/linear-algebra-01-vector.md)
+
 #### 개념 채우기
 
 - [자투리 공부👉(CRDT, RPC, WASM)](https://github.com/dusunax/javascript/blob/main/docs/CRDT-RPC-WASM.md)
