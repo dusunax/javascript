@@ -1,10 +1,10 @@
-# 선형대수학 Linear algebra 01
+# 선형 대수학 Linear algebra 01
 
 ## Vector란?
 
 > 강의: https://www.youtube.com/watch?v=fNk_zzaMoSs&list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab
 
-선형대수학 Linear algebra은 컴퓨터 과학, 물리학, 전기 공학, 기계 공학, 통계학 등 다양한 분야에서 사용됩니다.
+선형 대수학 Linear algebra은 컴퓨터 과학, 물리학, 전기 공학, 기계 공학, 통계학 등 다양한 분야에서 사용됩니다.
 
 |           | Geometric Intuition             | Numeric Operations                 |
 | --------- | ------------------------------- | ---------------------------------- |
@@ -29,8 +29,8 @@
 
 - 좌표계 위 벡터의 덧셈
 
-(이미지)  
-(이미지)
+<img src="https://github.com/dusunax/javascript/assets/94776135/a7b8b5ec-4cca-4383-a791-239ef5333ba3" width="400px">  
+<img src="https://github.com/dusunax/javascript/assets/94776135/25b139d5-6853-4f8d-adda-0e2225cb664b" width="400px">
 
 ### 상수배 Multification by number
 
@@ -44,7 +44,7 @@ Scaler란?
 - 벡터를 scale하는 숫자
 - `곱할 숫자`
 
-(이미지)
+<img src="https://github.com/dusunax/javascript/assets/94776135/bcb395bf-5cae-4644-9a46-629837d6b017" width="400px">
 
 ### 벡터의 사용 목적
 
