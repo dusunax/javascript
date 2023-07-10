@@ -26,6 +26,7 @@
 #### 선형 대수학 Linear Algebra
 
 - [선형대수학: Vector란?](https://github.com/dusunax/javascript/blob/main/docs/linear-algebra-01-vector.md)
+- [선형대수학: Basis Vectors와 Span](https://github.com/dusunax/javascript/blob/main/docs/linear-algebra-02-basis-vactor-and-span.md)
 
 #### 개념 채우기
 
