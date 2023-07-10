@@ -53,3 +53,7 @@ Scaler란?
 | 목적             | 많은 수의 배열을 시각화 및 개념화          | 공간과 공간 조작을 숫자로 표현                   |
 | 데이터 처리 방법 | 데이터를 시각적으로 표현하고 인사이트 도출 | 수학적 모델링 및 시뮬레이션                      |
 | 예시             | 히스토그램, 산점도, 상자 그림, 히트맵 등   | 3D 모델링, 빛의 반사, 재질 시뮬레이션, 물리 엔진 |
+
+---
+
+[NextPage](https://github.com/dusunax/javascript/blob/main/docs/linear-algebra-02-basis-vactor-and-span.md)
