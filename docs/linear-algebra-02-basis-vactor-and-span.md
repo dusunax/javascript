@@ -39,7 +39,7 @@ c₁, c₂ 스칼라(실수)
 - 두 scaler를 자유롭게 변경한다면 ⇒ 모든 벡터를 그릴 수 있음
   - 다만 둘 다 제로거나, 방향이 같은 경우도 있을 수 있음
 
-<img src="" width="400px" />
+<img src="https://github.com/dusunax/javascript/assets/94776135/ac158287-a1b8-48b5-9a33-1d58fbbb96ad" width="400px" />
 
 ### **단일 벡터 Single Vector** & **다중 벡터 Vector Collection**
 
@@ -58,8 +58,8 @@ c₁, c₂ 스칼라(실수)
 | 벡터들이 일직선 상에 위치함                                | 벡터들이 일직선 상에 위치하지 않음         |
 | 차원이 낮아짐                                              | 차원을 유지                                |
 
-<img src="" width="400px" />  
-<img src="" width="400px" />
+<img src="https://github.com/dusunax/javascript/assets/94776135/f1a7330b-1d54-4b51-bfe5-da929a5dd390" width="400px" />   
+<img src="https://github.com/dusunax/javascript/assets/94776135/83fd5194-2307-40ad-96dc-66c0925f2482" width="400px" />
 
 ### Vectors in 3D dimention (v, w, u)
 
