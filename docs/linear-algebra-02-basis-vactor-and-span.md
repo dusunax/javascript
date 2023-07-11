@@ -59,6 +59,7 @@ c₁, c₂ 스칼라(실수)
 | 차원이 낮아짐                                              | 차원을 유지                                |
 
 <img src="https://github.com/dusunax/javascript/assets/94776135/f1a7330b-1d54-4b51-bfe5-da929a5dd390" width="400px" />   
+<br />
 <img src="https://github.com/dusunax/javascript/assets/94776135/83fd5194-2307-40ad-96dc-66c0925f2482" width="400px" />
 
 ### Vectors in 3D dimention (v, w, u)
