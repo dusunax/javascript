@@ -30,8 +30,6 @@
 - [선형대수학: 선형 변환 Linear Transformation](https://github.com/dusunax/javascript/blob/main/docs/linear-algebra-03-linear-transformation.md)
 - [선형대수학: 행렬 복제 Matrix multiplication]()
 
-[NextPage](https://github.com/dusunax/javascript/blob/main/docs/linear-algebra-03-linear-transformation.md)
-
 #### 개념 채우기
 
 - [자투리 공부👉(Deep Link)](https://github.com/dusunax/javascript/blob/main/docs/deep-link.md)

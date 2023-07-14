@@ -47,22 +47,22 @@ x [ a ] + y [ b ] = [ ax + by ]
   | 1 | 0 | 2 | x |
   | 0 | 1 | 3 | y |
 
-<img src="" width="500px" />
+<img src="https://github.com/dusunax/javascript/assets/94776135/b600a397-be1c-416e-a92c-7027055ca61f" width="300px" />
 
 ### 반시계 90도 회전 -90 deg rotations of grid
 
-<img src="" width="500px" />
+<img src="https://github.com/dusunax/javascript/assets/94776135/d3941a53-19d0-4557-b705-0de6bb24beaa" width="500px" />
 
 ### 기울기 Shear
 
-<img src="" width="500px" />
+<img src="https://github.com/dusunax/javascript/assets/94776135/3feb8685-6d54-4818-92fb-2ca58550d88a" width="500px" />
 
 ### 그리드 그려보기
 
-<img src="" width="500px" />
+<img src="https://github.com/dusunax/javascript/assets/94776135/e0e3cc1a-382c-4cbc-9f3d-df7cd0dbed2b" width="300px" />
 
 ### Linearly dependent columns
 
 - 1차원 span의 경우
 
-<img src="" width="500px" />
+<img src="https://github.com/dusunax/javascript/assets/94776135/7cc9fc00-d88b-4f9f-b95a-bbc72aaa44b1" width="500px" />
