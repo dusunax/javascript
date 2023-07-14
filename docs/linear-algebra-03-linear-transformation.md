@@ -66,3 +66,7 @@ x [ a ] + y [ b ] = [ ax + by ]
 - 1차원 span의 경우
 
 <img src="https://github.com/dusunax/javascript/assets/94776135/7cc9fc00-d88b-4f9f-b95a-bbc72aaa44b1" width="500px" />
+
+---
+
+[NextPage](https://github.com/dusunax/javascript/blob/main/docs/linear-algebra-04-matrix-multiplication.md)
