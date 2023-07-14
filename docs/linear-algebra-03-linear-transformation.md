@@ -1,68 +1,45 @@
 # 선형 대수학 Linear algebra
 
-> https://www.youtube.com/watch?v=kYB8IZa5AuE
+> https://www.youtube.com/watch?v=XkY2DOUCWMU
 
-## 선형 변환 Linear transformation
+## 행렬 복제 Matrix multiplication
 
-> 원점을 고정하고, 공간 space을 변형합니다.
+### 선형 변환 Linear Transformation
 
-| linear         | 곡선이 아닌 선 |
-| -------------- | -------------- |
-| transformation | function, 변환 |
+> 이전 공부 내용 : [Linear algebra -3: Linear transformation](https://www.notion.so/Linear-algebra-3-Linear-transformation-9ed4e4b5ec594b7bb5df6f829fa8ed9d?pvs=21)
 
-- 입력 vector와 출력 vector가 존재합니다.
+- 2x2 Matrix(행렬)과 vector로 구성
+- vector input과 vector output을 가지는 function이라 할 수 있음
 
-```tsx
-input vector = L(v vector) ⇒ output vector
-```
+<img src="" width="500px" />
 
-- 2차원에서 선형 변환은 무한한 그리드를 만듭니다.
+> 📎 매트릭스 읽는 순서
+> 1 3
+> 2 4
 
-### 선형 변환의 조건 (not arbitrary transformation!)
+### 두 변환의 합성 Composition of two separate transformation
 
-1. 모든 선(line)은 직선입니다.
-2. 원점은 고정되어 있습니다.
-3. 그리드 선은 평행하고 균일한 간격을 가집니다.
+- 만약 `rotate`과 `shear`의 선형 변환을 연쇄적으로 수행할 때
+  마지막으로 도착하는 `matrix`는 `rotate`과 `shear`의 합성과 같음
+  <img src="" width="500px" />
 
-### 숫자로 선형 변환 표현하기
+      ```tsx
+      f(g(x)): read right to left
+      ```
 
-- i hat과 j hat을 사용하여 그리드를 표현할 수 있습니다.
-- i hat과 j hat을 사용하여 변환을 표현할 수 있습니다.
-  - i hat과 j hat에 스칼라 값을 곱하여 표현합니다.
+- 괄호의 transform를 먼저 처리 후, 바깥 transform을 처리
+  - 1번 선형 변환
+    <img src="" width="500px" />
+  - 2번 선형 변환
+    <img src="" width="500px" />
+- 쓰면서 일단 외우기
+  <img src="" width="500px" />  
+  <br />
+  <img src="" width="500px" />  
+  <br />
 
-### 2x2 행렬, 2x2 Matrix
+### A(BC) = (BC)A
 
-- first colum : i hat이 이동하는 곳
-- second colum : j hat이 이동하는 곳
-- x y ⇒ 입력값
-
-```tsx
-x [ a ] + y [ b ] = [ ax + by ]
-  [ c ]     [ d ]   [ cx + dy ]
-```
-
-- 예시
-  | i hat | j hat | | |
-  | ----- | ----- | --- | --- |
-  | 1 | 0 | 2 | x |
-  | 0 | 1 | 3 | y |
-
-<img src="https://github.com/dusunax/javascript/assets/94776135/b600a397-be1c-416e-a92c-7027055ca61f" width="300px" />
-
-### 반시계 90도 회전 -90 deg rotations of grid
-
-<img src="https://github.com/dusunax/javascript/assets/94776135/d3941a53-19d0-4557-b705-0de6bb24beaa" width="500px" />
-
-### 기울기 Shear
-
-<img src="https://github.com/dusunax/javascript/assets/94776135/3feb8685-6d54-4818-92fb-2ca58550d88a" width="500px" />
-
-### 그리드 그려보기
-
-<img src="https://github.com/dusunax/javascript/assets/94776135/e0e3cc1a-382c-4cbc-9f3d-df7cd0dbed2b" width="300px" />
-
-### Linearly dependent columns
-
-- 1차원 span의 경우
-
-<img src="https://github.com/dusunax/javascript/assets/94776135/7cc9fc00-d88b-4f9f-b95a-bbc72aaa44b1" width="500px" />
+- Matrix를 숫자가 아니라 그래프 위의 화살표로 생각했을 때(그래픽적으로 vector를 생각했을 때)
+  - (1) `rotate` 후에 `shear`와 (2) `shear` 후에 `rotate` ⇒ 결과는 같음
+  - 해당 그래프를 이미징하여 `A(BC) = (AB)C`의 개념에 접근합니다.
