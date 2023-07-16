@@ -2,7 +2,7 @@
 
 > https://www.youtube.com/watch?v=XkY2DOUCWMU
 
-## 행렬 복제 Matrix multiplication
+## 행렬 곱셈 Matrix multiplication
 
 ### 선형 변환 Linear Transformation
 
