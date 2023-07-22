@@ -21,15 +21,15 @@
 
 - 3차원 공간에서의 선형 변환
 
-<img src="" width="500px" /><br />
+<img src="https://github.com/dusunax/javascript/assets/94776135/6624411d-20ba-44b9-a990-2658a57ced65" width="500px" /><br />
 
-<img src="" width="500px" /><br />
+<img src="https://github.com/dusunax/javascript/assets/94776135/63c05d54-0aaf-4293-99ff-e6a8601db171" width="500px" /><br />
 
 ### 3. **두 행렬의 곱셈** multiply two metrix
 
 - 오른쪽 적용된 후 왼쪽 적용
 
-<img src="" width="500px" /><br />
+<img src="https://github.com/dusunax/javascript/assets/94776135/6502b330-d879-4072-9222-a7308be69a3a" width="500px" /><br />
 
 ### 4. **3차원 방향과 오른손 규칙**
 
@@ -37,7 +37,7 @@
 
 - 왼손과는 반대 방향으로 적용됩니다.(반대방향 = 음수)
 
-<img src="" width="500px" /><br />
+<img src="https://github.com/dusunax/javascript/assets/94776135/7e4d4079-e7b9-4960-920f-71d4e529024b" width="300px" /><br />
 
 ---
 
@@ -51,7 +51,7 @@
 
 - 행렬식 == 평행육면체의 부피값
 
-<img src="" width="500px" /><br />
+<img src="https://github.com/dusunax/javascript/assets/94776135/8f65d0fc-f785-4825-a241-104d5952e77a" width="500px" /><br />
 
 - 행렬식의 값이 0이라면 차원이 낮아지거나 원점이 될 수 있습니다.
   이는 선형 의존인 경우를 나타냅니다.
@@ -62,4 +62,4 @@
 
 행렬식의 값이 0이 아니라면 bc는 평행사변형이 얼마나 찌그러지는 지의 값을 나타냅니다.
 
-<img src="" width="500px" /><br />
+<img src="https://github.com/dusunax/javascript/assets/94776135/1743e329-94db-42d8-b0ce-804019ab61ff" width="500px" /><br />
