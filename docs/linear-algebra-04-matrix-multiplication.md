@@ -42,3 +42,7 @@
 - Matrix를 숫자가 아니라 그래프 위의 화살표로 생각했을 때(그래픽적으로 vector를 생각했을 때)
   - (1) `rotate` 후에 `shear`와 (2) `shear` 후에 `rotate` ⇒ 결과는 같음
   - 해당 그래프를 이미징하여 `A(BC) = (AB)C`의 개념에 접근합니다.
+
+---
+
+[NextPage](https://github.com/dusunax/javascript/blob/main/docs/linear-algebra-05-determinant.md)

@@ -63,3 +63,7 @@
 행렬식의 값이 0이 아니라면 bc는 평행사변형이 얼마나 찌그러지는 지의 값을 나타냅니다.
 
 <img src="https://github.com/dusunax/javascript/assets/94776135/1743e329-94db-42d8-b0ce-804019ab61ff" width="500px" /><br />
+
+---
+
+[NextPage](https://github.com/dusunax/javascript/blob/main/docs/linear-algebra-06-inverse-matrix-and-column-space-and-null-space.md)
