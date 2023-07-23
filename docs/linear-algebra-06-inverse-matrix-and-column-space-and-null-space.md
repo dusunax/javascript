@@ -70,3 +70,7 @@
 영공간은 행렬의 영벡터 zero vector(원점으로 이동하는 벡터)들의 집합을 의미합니다.
 
 `Null space` 또는 `Kernel of a matrix`라고도 합니다.
+
+---
+
+[NextPage](https://github.com/dusunax/javascript/blob/main/docs/linear-algebra-07-nonsquare-matrices-and-dot-product.md)
