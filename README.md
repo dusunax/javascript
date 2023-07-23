@@ -21,7 +21,7 @@
 
 ## 주제별 정리
 
-`(공부일자 역순)`
+`(주제별 공부일자 역순)`
 
 #### 선형 대수학 Linear Algebra
 
@@ -30,6 +30,8 @@
 - [선형대수학: Basis Vectors와 Span](https://github.com/dusunax/javascript/blob/main/docs/linear-algebra-02-basis-vactor-and-span.md)
 - [선형대수학: 선형 변환 Linear Transformation](https://github.com/dusunax/javascript/blob/main/docs/linear-algebra-03-linear-transformation.md)
 - [선형대수학: 행렬 복제 Matrix multiplication](https://github.com/dusunax/javascript/blob/main/docs/linear-algebra-04-matrix-multiplication.md)
+- [선형대수학: 행렬식 determinant](https://github.com/dusunax/javascript/blob/main/docs/linear-algebra-05-determinant.md)
+- [선형대수학: 역행렬 Inverse matrix, 열공간 Column space, 영공간 Null space](https://github.com/dusunax/javascript/blob/main/docs/linear-algebra-06-inverse-matrix-and-column-space-and-null-space.md)
 - [선형대수학: 비정사각형 행렬 Linear matrices, 내적 Dot product](https://github.com/dusunax/javascript/blob/main/docs/linear-algebra-07-nonsquare-matrices-and-dot-product.md)
 
 #### 개념 채우기
