@@ -33,7 +33,8 @@
 ### 3. 1x2 행렬 (1x2 matrix)
 
 - number line
-  <img src="https://github.com/dusunax/javascript/assets/94776135/ae0b826f-c609-484d-8735-afd5d4127cef" width="500px" /><br />
+
+<img src="https://github.com/dusunax/javascript/assets/94776135/ae0b826f-c609-484d-8735-afd5d4127cef" width="500px" /><br />
 
 비정사각형 행렬 **Nonsquare matrices**은 다양한 상황에 사용하며, 열공간 Column Space을 통해 변환된 벡터들의 특징을 파악할 수 있습니다.
 
