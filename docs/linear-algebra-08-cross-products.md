@@ -17,7 +17,7 @@
 - 만약 v가 w의 왼쪽에 위치한다면, 외적 (v × w) 값은 음수
 - 만약 v가 w의 오른쪽에 위치한다면, 외적 (w × v) 값은 양수
 
-<img src="" width="400px" />
+<img src="https://github.com/dusunax/javascript/assets/94776135/9ed643ca-b9fa-43ee-9133-e747273776aa" width="200px" />
 
 ### 2. 행렬식 determinant
 
@@ -25,9 +25,9 @@
 
 - 행렬식으로 평행사변형의 값을 계산
 
-<img src="" width="400px" />
-
-<img src="" width="400px" />
+<img src="https://github.com/dusunax/javascript/assets/94776135/d4c15feb-6a54-4366-ae06-d11427278a84" width="400px" />
+<br />
+<img src="https://github.com/dusunax/javascript/assets/94776135/f226cb21-8f55-4e4a-8d4b-c38f1114d47c" width="400px" />
 
 ### 3. cross products 특징
 
@@ -36,7 +36,7 @@
 
 ### 4. 3차원 벡터 결합
 
-<img src="" width="400px" />
+<img src="https://github.com/dusunax/javascript/assets/94776135/b82a1407-3545-4e0a-8643-4960018527c3" width="200px" />
 
 외적은 두 개의 3차원 벡터를 결합하여 새로운 3차원 벡터로 표현할 수 있습니다.
 
@@ -45,7 +45,7 @@
 - 결과 벡터의 길이는 평행사변형의 면적과 같다.
 - 방향은 오른손 법칙을 따라 평행사변형의 평면에 수직으로 설정된다.
 
-<img src="" width="400px" />
+<img src="https://github.com/dusunax/javascript/assets/94776135/e8da97ae-95b6-479e-a7da-03a14ad5e442" width="200px" />
 
 ### 5. 3차원 행렬식
 
@@ -53,7 +53,7 @@
 
 이는 세 벡터로 형성된 평행육면체의 부피를 나타냅니다.
 
-<img src="" width="400px" />
+<img src="https://github.com/dusunax/javascript/assets/94776135/cf8aed62-71f6-4666-b13f-45fcb44ee5b0" width="400px" />
 
 ---
 
