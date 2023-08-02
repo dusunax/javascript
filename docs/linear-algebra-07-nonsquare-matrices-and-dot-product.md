@@ -3,7 +3,6 @@
 > - [https://www.youtube.com/watch?v=v8VSDg_WQlA](https://www.youtube.com/watch?v=v8VSDg_WQlA&list=PL0-GT3co4r2y2YErbmuJw2L5tW4Ew2O5B&index=9)
 > - https://www.youtube.com/watch?v=LyGKycYT2v0
 
-
 ## 📌 비정사각형 행렬 **Nonsquare matrices**
 
 비정사각형 행렬은 행과 열의 개수가 같지 않은 행렬을 의미합니다.
@@ -19,7 +18,6 @@
   - 3차원 공간에서 2차원 평면으로 투영된 벡터들의 집합입니다.
 
 <img src="https://github.com/dusunax/javascript/assets/94776135/0fae0fcd-29dc-48fc-b8f3-e2ef7239704a" width="300px" /><br />
-
 
 ### 2. 2x3 행렬 (2x3 matrix)
 
@@ -104,3 +102,7 @@
 <img src="https://github.com/dusunax/javascript/assets/94776135/c9843a7f-943e-4758-82ce-845378204cba" width="500px" /><br />
 
 <img src="https://github.com/dusunax/javascript/assets/94776135/47f78130-57b1-44c9-8e61-37484bcf5296" width="500px" /><br />
+
+---
+
+[NextPage](https://github.com/dusunax/javascript/blob/main/docs/linear-algebra-08-cross-products.md)
