@@ -2,7 +2,7 @@
 
 > 모던 자바스크립트 Deep Dive + Mozilla
 
-## 📌 Proxy & Reflect
+## 📌 Proxy & Reflect: part1
 
 > 자바스크립트
 > https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Proxy#%ED%94%84%EB%9D%BC%EC%9D%B4%EB%B9%97_%EC%86%8D%EC%84%B1_%ED%8F%AC%EC%9B%8C%EB%94%A9_%EC%97%86%EC%9D%8C > https://replit.com/@dusunax/javascript#index.js
