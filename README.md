@@ -27,6 +27,10 @@
 
 `(주제별 공부일자 역순)`
 
+#### 자바스크립트 with Deep Dive
+
+- [자바스크립트: 표준 내장(빌트인) 객체 Standard Built-in Object](https://github.com/dusunax/javascript/blob/main/docs/JavaScript_standard-built-in-object.md)
+
 #### 선형 대수학 Linear Algebra
 
 - [선형대수학 공부 메인](https://dusunax.github.io/javascript/linear-algebra)
