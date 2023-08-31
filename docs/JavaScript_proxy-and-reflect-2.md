@@ -80,7 +80,7 @@ const proxy = new Proxy(aSecret, {});
 console.log(proxy.secret); // TypeError: Cannot read private member #secret from an object whose class did not declare it
 ```
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d967c7f9-4761-4796-a083-bebf7f42ccc1/Untitled.png)
+![image](https://github.com/dusunax/javascript/assets/94776135/b0f13c92-61dd-4891-81a0-8f549bdb76e9)
 
 - get()이 호출될 때, this값이 secret이 아니라 proxy이므로 #secret에 액세스할 수 없음
   - secret을 this로 사용할 것
@@ -163,9 +163,7 @@ person.age = "young"; // 예외 발생: type error
 person.age = 300; // 예외 발생: range error
 ```
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/dd3f8ba2-a2f3-4ef1-bfc2-a2109d179451/Untitled.png)
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/dbfe1160-1180-44a6-9113-936293a6435f/Untitled.png)
+![image](https://github.com/dusunax/javascript/assets/94776135/22bbbf54-c116-4b81-9a80-6938243b9893)
 
 ### 예제: 생성자 확장하기, construct(), apply()
 
@@ -222,7 +220,7 @@ const Person = function (name) {
 };
 ```
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d73b9954-d8a9-40b3-9493-9063ccb92627/Untitled.png)
+![image](https://github.com/dusunax/javascript/assets/94776135/62b4014e-7acb-4946-9e60-d08eab43270b)
 
 - `construct()`: new 연산자에 대한 트랩 (new target이 유효해야 함, [[Construct]])
 
