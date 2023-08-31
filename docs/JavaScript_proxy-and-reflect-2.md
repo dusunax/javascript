@@ -84,52 +84,50 @@ console.log(proxy.secret); // TypeError: Cannot read private member #secret from
 
 - get()이 호출될 때, this값이 secret이 아니라 proxy이므로 #secret에 액세스할 수 없음
   - secret을 this로 사용할 것
-    <aside>
-    💡 **get trap**
 
-    **`get`** 트랩은 **`return target[prop]`**과 같이 원래 객체의 프로퍼티 값을 반환하는 것이 일반적입니다. 이렇게 하면 **`Proxy`** 객체가 원래 객체의 행동을 보강하거나 변경할 수 있으면서도, 기존의 객체 동작을 그대로 활용할 수 있습니다.
+>💡 get trap
+>
+>`get` 트랩은 `return target[prop]`과 같이 원래 객체의 프로퍼티 값을 반환하는 것이 일반적입니다. 이렇게 하면 `Proxy` 객체가 원래 객체의 행동을 보강하거나 변경할 수 있으면서도, 기존의 객체 동작을 그대로 활용할 수 있습니다.
 
-    </aside>
+```jsx
+const proxyS = new Proxy(aSecret, {
+  get(target, prop) {
+    // 'this' == Reflect.get(target, prop, receiver)
+    return target[prop];
+  },
+});
+```
 
-    ```jsx
-    const proxyS = new Proxy(aSecret, {
-      get(target, prop) {
-        // 'this' == Reflect.get(target, prop, receiver)
-        return target[prop];
-      },
-    });
-    ```
+- 메소드의 this값 원래 객체로 리디렉션
 
-    - 메소드의 this값 원래 객체로 리디렉션
+```jsx
+class Secret4 {
+  #x = 1;
+  x() {
+    return this.#x;
+  }
+}
 
-    ```jsx
-    class Secret4 {
-      #x = 1;
-      x() {
-        return this.#x;
-      }
+const aSecret4 = new Secret4(); // target
+const proxy4 = new Proxy(aSecret4, {
+  get(target, prop, receiver) {
+    const value = target[prop];
+    if (value instanceof Function) {
+      // instance가 함수인 경우
+      return function (...args) {
+        // 함수 래핑
+        return value.apply(this === receiver ? target : this, args); // 기존 동작을 가로챔
+        // 만약 this가 receiver와 같다면(this === receiver가 참이라면), target 객체로 설정
+        // 그렇지 않으면 현재 객체(this)로 설정
+      };
     }
+    return value;
+  },
+});
+console.log(proxy4.x());
+```
 
-    const aSecret4 = new Secret4(); // target
-    const proxy4 = new Proxy(aSecret4, {
-      get(target, prop, receiver) {
-        const value = target[prop];
-        if (value instanceof Function) {
-          // instance가 함수인 경우
-          return function (...args) {
-            // 함수 래핑
-            return value.apply(this === receiver ? target : this, args); // 기존 동작을 가로챔
-            // 만약 this가 receiver와 같다면(this === receiver가 참이라면), target 객체로 설정
-            // 그렇지 않으면 현재 객체(this)로 설정
-          };
-        }
-        return value;
-      },
-    });
-    console.log(proxy4.x());
-    ```
-
-    - 일부 js 객체에는 액세스 할 수 없는 내부 슬롯이 있음 ex) Map의 [[MapData]]
+- 일부 js 객체에는 액세스 할 수 없는 내부 슬롯이 있음 ex) Map의 [[MapData]]
 - 검증: 객체에 전달된 값 확인 가능
 
 ```jsx
