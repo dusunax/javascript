@@ -37,21 +37,21 @@ https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Re
 
 - proxy와 정적 메소드명 동일
 
-| 메소드 | 내용 | 구문, 비고 |
-| --- | --- | --- |
-| apply | 대상 함수를 주어진 매개변수로 호출 // this 값을 지정하거나, 매개변수를 넘기기 | Reflect.apply(target, thisArgument, argumentsList); |
-| construct | new 연산자, 매개변수를 가변 길이로 호출 가능 | Reflect.construct(target, argumentsList[, newTarget]) |
-| defineProperty | 키&값 설정, Boolean 반환 | Reflect.defineProperty(target, propertyKey, attributes); |
-| deleteProperty | 함수로 object로부터 property 삭제 | Reflect.deleteProperty(target, propertyKey); |
-| get | 속성 값 반환 | Reflect.get(target, propertyKey[, receiver]) |
-| getOwnPropertyDescriptor | 속성이 대상 객체에 존재하면 서술자 반환, 아니면 undefind | Reflect.getOwnPropertyDescriptor(target, propertyKey); |
-| getPrototypeOf | 프로토타입 반환 | Reflect.getPrototypeOf(target); |
-| has | in 연산자, return Boolean | Reflect.has(target, propertyKey); |
-| isExtensible | 객체 확장 여부, return Boolean | Reflect.isExtensible(target); |
-| ownKeys | 객체의 자체 속성 키 배열 반환 | Reflect.ownKeys(target); |
-| preventExtensions | 확장(객체 추가) 가능 여부 | Reflect.preventExtensions(target); |
-| set | 객체 속성의 값 결정 | Reflect.set(target, propertyKey, value[, receiver]) |
-| setPrototypeOf | 객체의 프로토타입을 다른 객체나 null로 바꿀 수 있음 | Reflect.setPrototypeOf(target, prototype); |
+| 메소드                   | 내용                                                                          | 구문, 비고                                               |
+| ------------------------ | ----------------------------------------------------------------------------- | -------------------------------------------------------- |
+| apply                    | 대상 함수를 주어진 매개변수로 호출 // this 값을 지정하거나, 매개변수를 넘기기 | Reflect.apply(target, thisArgument, argumentsList);      |
+| construct                | new 연산자, 매개변수를 가변 길이로 호출 가능                                  | Reflect.construct(target, argumentsList[, newTarget])    |
+| defineProperty           | 키&값 설정, Boolean 반환                                                      | Reflect.defineProperty(target, propertyKey, attributes); |
+| deleteProperty           | 함수로 object로부터 property 삭제                                             | Reflect.deleteProperty(target, propertyKey);             |
+| get                      | 속성 값 반환                                                                  | Reflect.get(target, propertyKey[, receiver])             |
+| getOwnPropertyDescriptor | 속성이 대상 객체에 존재하면 서술자 반환, 아니면 undefind                      | Reflect.getOwnPropertyDescriptor(target, propertyKey);   |
+| getPrototypeOf           | 프로토타입 반환                                                               | Reflect.getPrototypeOf(target);                          |
+| has                      | in 연산자, return Boolean                                                     | Reflect.has(target, propertyKey);                        |
+| isExtensible             | 객체 확장 여부, return Boolean                                                | Reflect.isExtensible(target);                            |
+| ownKeys                  | 객체의 자체 속성 키 배열 반환                                                 | Reflect.ownKeys(target);                                 |
+| preventExtensions        | 확장(객체 추가) 가능 여부                                                     | Reflect.preventExtensions(target);                       |
+| set                      | 객체 속성의 값 결정                                                           | Reflect.set(target, propertyKey, value[, receiver])      |
+| setPrototypeOf           | 객체의 프로토타입을 다른 객체나 null로 바꿀 수 있음                           | Reflect.setPrototypeOf(target, prototype);               |
 
 ## 2. Proxy
 
@@ -109,4 +109,4 @@ console.log(proxy3.message1); // hello
 console.log(proxy3.message2); // world
 ```
 
-=> [Proxy 예제 살펴보기]()에서 계속
+=> [Proxy 예제 살펴보기-1](https://github.com/dusunax/javascript/blob/main/docs/JavaScript_proxy-and-reflect-2.md)에서 계속
