@@ -30,6 +30,8 @@
 #### 자바스크립트 with Deep Dive
 
 - [자바스크립트: 표준 내장(빌트인) 객체 Standard Built-in Object](https://github.com/dusunax/javascript/blob/main/docs/JavaScript_standard-built-in-object.md)
+- [자바스크립트: Proxy & Reflect-part1](https://github.com/dusunax/javascript/blob/main/docs/JavaScript_proxy-and-reflect-1.md)
+- [자바스크립트: Proxy & Reflect-part2](https://github.com/dusunax/javascript/blob/main/docs/JavaScript_proxy-and-reflect-2.md)
 
 #### 선형 대수학 Linear Algebra
 
