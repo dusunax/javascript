@@ -80,56 +80,54 @@ const proxy = new Proxy(aSecret, {});
 console.log(proxy.secret); // TypeError: Cannot read private member #secret from an object whose class did not declare it
 ```
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d967c7f9-4761-4796-a083-bebf7f42ccc1/Untitled.png)
+![image](https://github.com/dusunax/javascript/assets/94776135/b0f13c92-61dd-4891-81a0-8f549bdb76e9)
 
 - get()이 호출될 때, this값이 secret이 아니라 proxy이므로 #secret에 액세스할 수 없음
   - secret을 this로 사용할 것
-    <aside>
-    💡 **get trap**
 
-    **`get`** 트랩은 **`return target[prop]`**과 같이 원래 객체의 프로퍼티 값을 반환하는 것이 일반적입니다. 이렇게 하면 **`Proxy`** 객체가 원래 객체의 행동을 보강하거나 변경할 수 있으면서도, 기존의 객체 동작을 그대로 활용할 수 있습니다.
+>💡 get trap
+>
+>`get` 트랩은 `return target[prop]`과 같이 원래 객체의 프로퍼티 값을 반환하는 것이 일반적입니다. 이렇게 하면 `Proxy` 객체가 원래 객체의 행동을 보강하거나 변경할 수 있으면서도, 기존의 객체 동작을 그대로 활용할 수 있습니다.
 
-    </aside>
+```jsx
+const proxyS = new Proxy(aSecret, {
+  get(target, prop) {
+    // 'this' == Reflect.get(target, prop, receiver)
+    return target[prop];
+  },
+});
+```
 
-    ```jsx
-    const proxyS = new Proxy(aSecret, {
-      get(target, prop) {
-        // 'this' == Reflect.get(target, prop, receiver)
-        return target[prop];
-      },
-    });
-    ```
+- 메소드의 this값 원래 객체로 리디렉션
 
-    - 메소드의 this값 원래 객체로 리디렉션
+```jsx
+class Secret4 {
+  #x = 1;
+  x() {
+    return this.#x;
+  }
+}
 
-    ```jsx
-    class Secret4 {
-      #x = 1;
-      x() {
-        return this.#x;
-      }
+const aSecret4 = new Secret4(); // target
+const proxy4 = new Proxy(aSecret4, {
+  get(target, prop, receiver) {
+    const value = target[prop];
+    if (value instanceof Function) {
+      // instance가 함수인 경우
+      return function (...args) {
+        // 함수 래핑
+        return value.apply(this === receiver ? target : this, args); // 기존 동작을 가로챔
+        // 만약 this가 receiver와 같다면(this === receiver가 참이라면), target 객체로 설정
+        // 그렇지 않으면 현재 객체(this)로 설정
+      };
     }
+    return value;
+  },
+});
+console.log(proxy4.x());
+```
 
-    const aSecret4 = new Secret4(); // target
-    const proxy4 = new Proxy(aSecret4, {
-      get(target, prop, receiver) {
-        const value = target[prop];
-        if (value instanceof Function) {
-          // instance가 함수인 경우
-          return function (...args) {
-            // 함수 래핑
-            return value.apply(this === receiver ? target : this, args); // 기존 동작을 가로챔
-            // 만약 this가 receiver와 같다면(this === receiver가 참이라면), target 객체로 설정
-            // 그렇지 않으면 현재 객체(this)로 설정
-          };
-        }
-        return value;
-      },
-    });
-    console.log(proxy4.x());
-    ```
-
-    - 일부 js 객체에는 액세스 할 수 없는 내부 슬롯이 있음 ex) Map의 [[MapData]]
+- 일부 js 객체에는 액세스 할 수 없는 내부 슬롯이 있음 ex) Map의 [[MapData]]
 - 검증: 객체에 전달된 값 확인 가능
 
 ```jsx
@@ -163,9 +161,7 @@ person.age = "young"; // 예외 발생: type error
 person.age = 300; // 예외 발생: range error
 ```
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/dd3f8ba2-a2f3-4ef1-bfc2-a2109d179451/Untitled.png)
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/dbfe1160-1180-44a6-9113-936293a6435f/Untitled.png)
+![image](https://github.com/dusunax/javascript/assets/94776135/22bbbf54-c116-4b81-9a80-6938243b9893)
 
 ### 예제: 생성자 확장하기, construct(), apply()
 
@@ -222,7 +218,7 @@ const Person = function (name) {
 };
 ```
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d73b9954-d8a9-40b3-9493-9063ccb92627/Untitled.png)
+![image](https://github.com/dusunax/javascript/assets/94776135/62b4014e-7acb-4946-9e60-d08eab43270b)
 
 - `construct()`: new 연산자에 대한 트랩 (new target이 유효해야 함, [[Construct]])
 
