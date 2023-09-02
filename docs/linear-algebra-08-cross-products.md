@@ -57,4 +57,4 @@
 
 ---
 
-<!-- [NextPage](https://github.com/dusunax/javascript/blob/main/docs/) -->
+<!-- [NextPage](https://github.com/dusunax/javascript/blob/main/docs/linear-algebra-09-change-of-basis.md) -->

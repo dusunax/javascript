@@ -45,6 +45,7 @@
 - [선형대수학: 역행렬 Inverse matrix, 열공간 Column space, 영공간 Null space](https://github.com/dusunax/javascript/blob/main/docs/linear-algebra-06-inverse-matrix-and-column-space-and-null-space.md)
 - [선형대수학: 비정사각형 행렬 Linear matrices, 내적 Dot product](https://github.com/dusunax/javascript/blob/main/docs/linear-algebra-07-nonsquare-matrices-and-dot-product.md)
 - [선형대수학: 외적 Cross Products](https://github.com/dusunax/javascript/blob/main/docs/linear-algebra-08-cross-products.md)
+- [선형대수학: 기저 변환 Change of basis](https://github.com/dusunax/javascript/blob/main/docs/linear-algebra-09-change-of-basis.md)
 
 #### 개념 채우기
 
