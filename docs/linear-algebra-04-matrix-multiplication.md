@@ -22,10 +22,9 @@
 - 만약 `rotate`과 `shear`의 선형 변환을 연쇄적으로 수행할 때
   마지막으로 도착하는 `matrix`는 `rotate`과 `shear`의 합성과 같음  
   <img src="https://github.com/dusunax/javascript/assets/94776135/4d7df921-e755-4306-8a15-35edbaf70bd9" width="500px" />
-
-      ```tsx
-      f(g(x)): read right to left
-      ```
+  ```tsx
+  f(g(x)): read right to left
+  ```
 
 - 괄호의 transform를 먼저 처리 후, 바깥 transform을 처리
   - 1번 선형 변환  
