@@ -5,6 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>자바스크립트 JavaScript</title>
+    <style>
+      .selected {
+        background-color: tomato;
+        border-color: tomato;
+      }
+    </style>
   </head>
   <body>
     <section>
@@ -35,7 +41,18 @@
         </li>
       </ul>
     </section>
-    
+
+    <!-- DOM 노드 proxy와 aria-selected -->
+    <section class="card" style="text-align: center;">
+      <h2 class="text-left">DOM 예제🤔</h2>
+      <aside>
+        <h2>DOM 객체 Proxy</h2>
+        <h3>item.getAttribute("aria-selected")</h3>
+        <button id="item-1" class="item">하나</button>
+        <button id="item-2" class="item">둘</button>
+      </aside>
+    </section>
+
     <script src="https://dusunax.github.io/javascript/assets/js/mvp.js"></script>
     <script type="module" src="./script.js"></script>
 </html>
