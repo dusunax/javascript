@@ -44,3 +44,43 @@ item2: ${items[1].getAttribute("aria-selected")}`);
     item.classList.add("selected");
   });
 });
+
+// ---------------------
+// 브라우저
+// ---------------------
+const products = new Proxy(
+  {
+    browsers: ["Firefox", "Chrome", "Safari", "MSIE", "Edge"],
+    savedBrowsers: [],
+    // currentBrowser: "",
+  },
+  {
+    get(obj, prop) {
+      // 마지막 브라우저 반환
+      if (prop === "currentBrowser") {
+        return obj.savedBrowsers[obj.savedBrowsers.length - 1];
+      }
+
+      return obj[prop];
+    },
+    set(obj, prop, value) {
+      if (prop === "currentBrowser") {
+        const newBrowser = obj.browsers.find((e) => value.indexOf(e) > -1);
+        if (newBrowser) {
+          obj.savedBrowsers.push(newBrowser);
+        }
+        return true;
+      }
+      return true;
+    },
+  }
+);
+
+const userAgent = navigator.userAgent;
+products.currentBrowser = "Safari";
+products.currentBrowser = userAgent;
+
+console.log("window 객체의 naviator: ", navigator);
+
+console.log("프록시 객체: ", products);
+console.log("마지막 browser", products.currentBrowser);
