@@ -6,5 +6,6 @@
 
 ## 리스트(학습 날짜 역순)
 
+- [2023년 9월 7~8일](https://github.com/dusunax/javascript/blob/main/logs/daily-log/2023/230908.md)
 - [2023년 9월 6일](https://github.com/dusunax/javascript/blob/main/logs/daily-log/2023/230906.md)
 - [2023년 9월 5일](https://github.com/dusunax/javascript/blob/main/logs/daily-log/2023/230905.md)
