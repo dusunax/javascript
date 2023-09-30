@@ -21,6 +21,10 @@
 - [230406 - SSH keys & SSH Forwarding](https://dusunax.notion.site/CS-SSH-keys-76d0014cfa684e8d855f6fef0e131aaa)
 - [230409 - Algorithms: 동적 프로그래밍, Dynamic Programming](https://dusunax.notion.site/Algorithms-cb03a4c325674cbb86a0dfc93633eef0)
 
+#### markdown 기록장
+
+- [데일리 학습 기록 리스트](https://github.com/dusunax/javascript/blob/main/logs/daily-log/list.md)
+
 ---
 
 ## 주제별 정리
