@@ -17,3 +17,7 @@
 - [2023년 9월 7~8일](https://github.com/dusunax/javascript/blob/main/logs/daily-log/2023/230908.md)
 - [2023년 9월 6일](https://github.com/dusunax/javascript/blob/main/logs/daily-log/2023/230906.md)
 - [2023년 9월 5일](https://github.com/dusunax/javascript/blob/main/logs/daily-log/2023/230905.md)
+
+## 코드 실습 목록
+
+- Prototype: inheritance & constructor: [2023년 10월 17일](https://codesandbox.io/s/study-prototype-89k8fy?file=/src/index.mjs)
