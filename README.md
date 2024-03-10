@@ -23,7 +23,19 @@
 
 #### markdown 기록장
 
-- [데일리 학습 기록 리스트](https://github.com/dusunax/javascript/blob/main/logs/daily-log/list.md)
+- [데일리 학습 기록 리스트](https://github.com/dusunax/javascript/blob/main/logs/daily-log/list.md), [폴더](https://github.com/dusunax/javascript/tree/main/logs/daily-log/2023)
+
+---
+
+## Book Study
+
+#### 모던 자바스크립트 딥 다이브: 2023년 9월 9일 ~ 12월 30일
+
+- 스터디 발표: [클래스](https://github.com/dusunax/javascript/tree/main/ppts/javascript/class_231118), [DOM](https://github.com/dusunax/javascript/tree/main/ppts/javascript/dom_231202), [Event](https://github.com/dusunax/javascript/tree/main/ppts/javascript/event_231209), [실행 컨텍스트](https://github.com/dusunax/javascript/tree/main/ppts/javascript/execution-context_231104), [모듈&바벨&웹팩](https://github.com/dusunax/javascript/tree/main/ppts/javascript/module-babel-webpack_231230), [This와 클로저](https://github.com/dusunax/javascript/tree/main/ppts/javascript/this-keyword-and-closure-and-execution-context_231028)
+
+#### 모던 리액트 딥 다이브: 2024년 3월 4일~(진행중)
+
+- https://github.com/monthly-cs/2024-03-modern-react-deep-dive/tree/main/docs/dusunax
 
 ---
 
