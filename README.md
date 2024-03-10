@@ -10,23 +10,6 @@
 
 ---
 
-## 일자별 정리
-
-#### 노션 링크
-
-- [230121~22 - ES6, ES2022, ModulePattern](https://dusunax.notion.site/part-3-1433b3153d4f473f8944bbfae87839b6)
-- [230123 - NPM & dependencies와 Parcel](https://dusunax.notion.site/part-4-5660e8240227452d84eed2b87e05950a)
-- [230124 - Babel 그리고 Transfiling & Polyfilling](https://dusunax.notion.site/part-5-1d44444ab215444e83899df8f1855416)
-- [230125 - CORS, SOP and Preflight & Simple & Credentialed Request](https://dusunax.notion.site/CORS-37380813b8034c68836d818fd27a05ea)
-- [230406 - SSH keys & SSH Forwarding](https://dusunax.notion.site/CS-SSH-keys-76d0014cfa684e8d855f6fef0e131aaa)
-- [230409 - Algorithms: 동적 프로그래밍, Dynamic Programming](https://dusunax.notion.site/Algorithms-cb03a4c325674cbb86a0dfc93633eef0)
-
-#### markdown 기록장
-
-- [데일리 학습 기록 리스트](https://github.com/dusunax/javascript/blob/main/logs/daily-log/list.md), [폴더](https://github.com/dusunax/javascript/tree/main/logs/daily-log/2023)
-
----
-
 ## Book Study
 
 #### 모던 자바스크립트 딥 다이브: 2023년 9월 9일 ~ 12월 30일
@@ -39,7 +22,15 @@
 
 ---
 
-## 주제별 정리
+## 일자별
+
+#### markdown 기록장
+
+- [데일리 학습 기록 리스트](https://github.com/dusunax/javascript/blob/main/logs/daily-log/list.md), [폴더](https://github.com/dusunax/javascript/tree/main/logs/daily-log/2023)
+
+---
+
+## 주제별
 
 `(주제별 공부일자 역순)`
 
@@ -49,6 +40,12 @@
 - [자바스크립트: 표준 내장(빌트인) 객체 Standard Built-in Object](https://github.com/dusunax/javascript/blob/main/docs/JavaScript_standard-built-in-object.md)
 - [자바스크립트: Proxy & Reflect-part1](https://github.com/dusunax/javascript/blob/main/docs/JavaScript_proxy-and-reflect-1.md)
 - [자바스크립트: Proxy & Reflect-part2](https://github.com/dusunax/javascript/blob/main/docs/JavaScript_proxy-and-reflect-2.md)
+- [230409 - Algorithms: 동적 프로그래밍, Dynamic Programming](https://dusunax.notion.site/Algorithms-cb03a4c325674cbb86a0dfc93633eef0)
+- [230406 - SSH keys & SSH Forwarding](https://dusunax.notion.site/CS-SSH-keys-76d0014cfa684e8d855f6fef0e131aaa)
+- [230125 - CORS, SOP and Preflight & Simple & Credentialed Request](https://dusunax.notion.site/CORS-37380813b8034c68836d818fd27a05ea)
+- [230124 - Babel 그리고 Transfiling & Polyfilling](https://dusunax.notion.site/part-5-1d44444ab215444e83899df8f1855416)
+- [230123 - NPM & dependencies와 Parcel](https://dusunax.notion.site/part-4-5660e8240227452d84eed2b87e05950a)
+- [230121~22 - ES6, ES2022, ModulePattern](https://dusunax.notion.site/part-3-1433b3153d4f473f8944bbfae87839b6)
 
 #### 선형 대수학 Linear Algebra
 
