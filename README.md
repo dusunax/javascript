@@ -15,7 +15,7 @@
 #### 모던 리액트 딥 다이브: 2024년 3월 4일~(진행중)
 
 - https://github.com/monthly-cs/2024-03-modern-react-deep-dive/tree/main/docs/dusunax
-- 스터디 발표 장표: [리액트 핵심 요소 깊게 살펴보기](https://github.com/dusunax/javascript/blob/main/ppts/react/240309_jsx_react-fiber_class-component_memoization.pdf), [리액트와 상태 관리 라이브러리](https://github.com/dusunax/javascript/blob/main/ppts/react/240317_state-management.pdf), [디버깅](https://github.com/dusunax/javascript/blob/main/ppts/react/240324_debugging-react.pdf)
+- 스터디 발표 장표: [리액트 핵심 요소 깊게 살펴보기](https://github.com/dusunax/javascript/blob/main/ppts/react/240309_jsx_react-fiber_class-component_memoization.pdf), [리액트와 상태 관리 라이브러리](https://github.com/dusunax/javascript/blob/main/ppts/react/240317_state-management.pdf), [디버깅](https://github.com/dusunax/javascript/blob/main/ppts/react/240324_debugging-react.pdf), [서버 사이드 랜더링 & NextJS](https://github.com/dusunax/javascript/blob/main/ppts/react/240331_server-side-rendering.pdf), [모던 리액트 개발도구](https://github.com/dusunax/javascript/blob/main/ppts/react/240407_modern-react-development-and-deploy.pdf)
 
 #### 모던 자바스크립트 딥 다이브: 2023년 9월 9일 ~ 12월 30일
 
