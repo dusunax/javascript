@@ -1,0 +1,30 @@
+---
+title: 테스트 문제
+author: dusunax
+description: 다음 중 적합한 Apple의 타입은 무엇일까요?
+answer: 1
+---
+
+## questions
+
+```tsx
+const apple: Fruit = {
+  color: "red",
+};
+```
+
+### answer-1
+
+```tsx
+interface Fruit {
+  color: string;
+}
+```
+
+### answer-2
+
+```tsx
+interface Fruit {
+  color: "red";
+}
+```
