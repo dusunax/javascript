@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS offset-path, ray() 함수 예시</title>
+  <style>
+    /* 전체 스타일 */
+    body {
+      padding: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .container {
+      position: relative;
+      border: 1px solid #ccc;
+      height: 200px;
+      margin-bottom: 40px;
+    }
+
+    .p-50 {
+      padding: 50px;
+      box-sizing: border-box;
+    }
+
+    .solid {
+      width: 100%;
+      height: 100%;
+      background-color: rgb(223, 255, 255);
+    }
+    
+    .box {
+      width: 50px;
+      height: 50px;
+      border-radius: 8px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      background-color: yellow;
+      border-top: 4px solid black;
+      opacity: 20%;
+      animation: move 1s linear infinite;
+    }
+    
+    @keyframes move {
+      to {
+        offset-distance: 100%;
+        opacity: 100%;
+      }
+    }
+    
+    .code-block {
+      background-color: #f5f5f5;
+      padding: 10px;
+      border-radius: 4px;
+      margin-bottom: 10px;
+      font-family: monospace;
+      white-space: pre;
+    }
+
+    .outer0 {
+      position: relative;
+    }
+
+    svg {
+      fill: none;
+      stroke: black;
+      stroke-width: 1;
+      stroke-dasharray: 6;
+    }
+
+    /* 예시별 스타일 */
+    .box0 {
+      animation-duration: 5s;
+    }
+
+    .box1 {
+      animation-duration: 3s;
+    }
+    
+    .box0-a {
+      offset-path: padding-box;
+    }
+    .box0-b {
+      offset-path: content-box;
+    }
+    .box0-c {
+      offset-path: polygon(5% 10%, 95% 10%, 95% 90%, 5% 90%);
+    }
+    
+    .box1-a {
+      offset-path: url(#path-a);
+    }
+    
+    .box1-b {
+      offset-path: url(#path-b);
+    }
+    
+    .box2 {
+      offset-path: ray(0deg);
+      animation-direction: alternate;
+    }
+    
+    .box3 {
+      offset-rotate: 0deg;
+      offset-path: ray(105deg farthest-corner at 0px 0px);
+      animation-direction: alternate;
+      animation-duration: 2.5s;
+    }
+  </style>
+</head>
+<body>
+  <h1>CSS: offset-path, ray() 함수 예시</h1>
+  
+  <p>모든 예시에서 <code>offset-distance</code> 속성을 0%에서 100%로 애니메이션화하여 요소가 경로를 따라 움직이도록 합니다. 투명도는 20%에서 100%로 변화합니다.</p>
+
+  <h2>예시 0: 기본 동작</h2>
+  <p>1) offset-path 속성을 명시하지 않으면 기본값은 none이며, offset-distance는 position의 left, top, right, bottom과 같은 속성을 사용합니다. coord-box를 사용하여 박스의 어떤 부분을 기준으로 경로를 그릴지 선택할 수 있습니다.</p>
+  <p>2) basic-shape 기본 모양 함수를 사용하여 경로를 그릴 수 있습니다.</p>
+  <pre class="code-block">
+0-a. offset-path: padding-box;
+0-b. offset-path: content-box;
+0-c. offset-path: polygon(5% 10%, 95% 10%, 95% 90%, 5% 90%);</pre>
+  <div class="container p-50">
+    <div class="box box0 box0-a">0-a</div>
+    <div class="box box0 box0-b">0-b</div>
+    <div class="box box0 box0-c">0-c</div>
+    <div class="solid"></div>
+  </div>
+
+  <h2>예시 1: url(#svg-path)</h2>
+  <p>사각형과 별 모양의 svg의 경로를 따라 이동하는 예시입니다.</p>
+  <pre class="code-block">offset-path: url(#path-a);</pre>
+  <div class="container p-50">
+    <div class="outer0">
+      <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0" y="0" width="300" height="100" id="path-a"/>
+        <polygon points="150,10 170,60 220,60 180,90 190,140 150,110 110,140 120,90 80,60 130,60"
+        fill="gold" id="path-b" />
+      </svg>
+      <div class="box box1 box1-a">1-a</div>
+      <div class="box box1 box1-b">1-b</div>
+    </div>
+  </div>
+  
+  <h2>예시 2: ray() 함수</h2>
+  <p>ray의 기본 위치는 50%, 50%입니다. angle은 시작 위치부터 시작되는 path가 어떤 각도로 이동할지 결정합니다. 0도는 y축이 올라가는 기준이며, 시계 방향으로 각도가 증가합니다.(conic-gradient와 동일) 또한 요소가 해당 축을 top으로 맞닿도록 회전이 되어있는 모습을 볼 수 있습니다.</p>
+  <pre class="code-block">offset-path: ray(0deg);</pre>
+  <div class="container">
+    <div class="box box2">2</div>
+  </div>
+  
+  <h2>예시 3: 대각선 이동</h2>
+  <p>offset-rotate을 0deg로 설정해 요소가 회전하지 않도록 했습니다. at 0px 0px은 시작 위치를 결정합니다. farthest-corner는 시작 위치에서 가장 멀리 있는 코너를 타겟으로 합니다.</p>
+  <pre class="code-block">
+offset-rotate: 0deg;
+offset-path: ray(105deg farthest-corner at 0px 0px);</pre>
+  <div class="container">
+    <div class="box box3">3</div>
+  </div>
+</body>
+</html>
