@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>offset-path 예시</title>
+  <style>
+    :root {
+      --star-color: #341f00;
+      --heart-color: #390000;
+      --tree-color: #001f00;
+      --star-light-color: #ffa216;
+      --heart-light-color: #e10000;
+      --tree-light-color: #00c700;
+    }
+    body {
+      background-color: #000;
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    main {
+      display: flex;
+      flex-direction: column;
+      margin: 0 auto;
+      flex-wrap: wrap;
+    }
+
+    /* 탭 스타일 */
+    .tabs {
+      padding: 8px 16px;
+      background: rgb(43, 43, 43);
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    input[type="radio"] {
+      display: none;
+    }
+    input[type="radio"]:checked + .tabs {
+      background: rgb(84, 71, 0);
+    }
+    /* 선택된 탭 보이기 */
+    #tab-star:checked ~ .path-example#star,
+    #tab-heart:checked ~ .path-example#heart,
+    #tab-tree:checked ~ .path-example#tree {
+      display: block;
+    }
+
+    /* SVG 컨테이너 */
+    .path-example {
+      position: relative;
+      width: 300px;
+      height: 300px;
+      margin: 40px auto;
+      display: none;
+    }
+    .path-example .particle {
+      position: relative;
+    }
+    svg {
+      position: absolute;
+      filter: blur(2px);
+      width: 100%;
+      height: 100%;
+    }
+
+    /* 색상 및 path */
+    #star {
+      fill: var(--star-color);
+    }
+    #star .light {
+      background-color: var(--star-light-color);
+      offset-path: url(#star-path);
+    }
+    #heart {
+      fill: var(--heart-color);
+    }
+    #heart .light {
+      background-color: var(--heart-light-color);
+      offset-path: url(#heart-path);
+    }
+    #tree {
+      fill: var(--tree-color);
+    }
+    #tree .light {
+      background-color: var(--tree-light-color);
+      offset-path: url(#tree-path);
+      animation-timing-function: ease-in;
+    }
+
+    /* 파티클 */
+    .particle .light {
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      border-radius: 4px;
+      transform: translate(-50%, -50%);
+      offset-anchor: top;
+      animation: move 5s linear infinite;
+      opacity: 0;
+      z-index: 10;
+    }
+    .particle div{
+      position: relative;
+      height: 400px;
+      width: 0px;
+      margin: 0 auto;
+    }
+    .particle .light::before {
+      width: 8px;
+      height: 8px;
+      border-radius: 100%;
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      box-shadow: 0 0 20px rgb(186, 186, 186);
+      animation: pulse 0.5s linear infinite alternate;
+    }
+    .particle .light:nth-child(3n+2) {
+      animation-delay: 0.1s;
+    }
+    .particle .light:nth-child(3n+3) {
+      animation-delay: 0.2s;
+    }
+    .particle .light:nth-child(3n+4) {
+      animation-delay: 0.3s;
+    }
+    .particle .light:nth-child(3n+5) {
+      animation-delay: 0.4s;
+    }
+    .particle .light:nth-child(3n+6) {
+      animation-delay: 0.5s;
+    }
+
+    /* 애니메이션 */
+    @keyframes move {
+      0% {
+        offset-distance: 0%;
+        opacity: 1;
+    }
+    100% {
+      offset-distance: 100%;
+        opacity: 1;
+      }
+    }
+    @keyframes pulse {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <input type="radio" id="tab-star" name="tab" checked>
+    <label class="tabs" for="tab-star">⭐ Star</label>
+
+    <input type="radio" id="tab-heart" name="tab">
+    <label class="tabs" for="tab-heart">❤️ Heart</label>
+
+    <input type="radio" id="tab-tree" name="tab">
+    <label class="tabs" for="tab-tree">🌲 Tree</label>
+
+    <section class="path-example" id="star">
+      <svg width="300" height="300" xmlns="http://www.w3.org/2000/svg" class="star">
+        <polygon 
+          points="150,16.7 183.3,100 266.7,100 200,150 216.7,233.3 150,183.3 83.3,233.3 100,150 33.3,100 116.7,100"
+          id="star-path"
+        />
+      </svg>
+      <div class="particle">
+        <div class="light"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+      </div>
+    </section>
+
+    <section class="path-example" id="heart">
+      <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg" class="heart">
+        <path 
+          d="M150,170 C105,125 75,90 75,60 C75,35 100,20 125,20 C140,20 145,28 150,45 C155,28 160,20 175,20 C200,20 225,35 225,60 C225,90 195,125 150,170 Z" 
+          id="heart-path" 
+        />
+      </svg>
+      <div class="particle heart">
+        <div class="light"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+      </div>
+    </section>
+
+    <section class="path-example" id="tree">
+      <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg" class="tree">
+        <polygon 
+          points="150,10 190,70 175,70 200,100 185,100 215,150 85,150 115,100 100,100 125,70 110,70" 
+          id="tree-path" 
+        />
+      </svg>
+      <div class="particle tree">
+        <div class="light"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
