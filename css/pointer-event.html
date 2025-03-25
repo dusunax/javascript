@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pointer Event</title>
+  <style>
+    body {
+      margin: 0;
+    }
+    #pointer-event-container {
+      width: 100vw;
+      height: 100vh;
+    }
+    .circle {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      position: absolute;
+      transform: translate(-50%, -50%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #aaa;
+      box-shadow: 0 0 5px 10px #aaa;
+      color: #fff;
+      animation: fadeOut 1s 0.1s ease-in-out forwards;
+    }
+    @keyframes fadeOut {
+      from {
+        opacity: 1;
+      }
+      99% {
+        opacity: 0;
+        scale: 1.5;
+      }
+      to {
+        opacity: 0;
+        display: none;
+      }
+    }
+    #pointer-type-container { 
+      text-align: center;
+      padding: 10%;
+      font-size: 20px;
+      border: 1px solid #000;
+    }
+    #pointer-type {
+      display: inline-block;
+      min-width: 100px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div id="pointer-event-container">
+    <p id="pointer-type-container">
+      pointer type:
+      <span id="pointer-type"></span>
+    </p>
+  </div>
+  <script>
+    const container = document.getElementById('pointer-event-container');
+    const box = document.getElementById('pointer-type');
+
+    const appendCircle = (event) => {
+      const circle = document.createElement('div');
+      circle.classList.add('circle');
+      circle.style.left = event.clientX + 'px';
+      circle.style.top = event.clientY + 'px';
+      circle.innerText = event.pointerId;
+
+      container.appendChild(circle);
+      circle.setPointerCapture(event.pointerId);
+    }
+
+    container.addEventListener('pointerdown', (event) => {
+      console.log(event.target);
+      if(event.target.classList.contains('circle')) {
+        return;
+      }
+      
+      appendCircle(event);
+
+      box.innerText = event.pointerType;
+    });
+
+    container.addEventListener('pointerup', (event) => {
+      setTimeout(() => {
+        box.innerText = '';
+      }, 500);
+    });
+  </script>
+</body>
+</html>
+
+
+
