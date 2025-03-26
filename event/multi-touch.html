@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multi Touch</title>
+  <style>
+    * {
+      touch-action: none;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    body {
+      margin: 0;
+    }
+    main {
+      width: 100vw;
+      height: 100vh;
+      background-color: skyblue;
+      padding: 24px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+    }
+    h2 {
+      margin: 10px 0;
+    }
+    .container {
+      flex: 1;
+      background: white;
+      border: 1px solid black;
+      position: relative;
+    }
+    .box {
+      width: 100px;
+      height: 100px;
+      position: absolute;
+    }
+    #box1 {
+      background-color: red;
+      left: 10px;
+      top: 10px;
+    }
+    #box2 {
+      background-color: blue;
+      left: 120px;
+      top: 10px;
+    }
+    .box.long-press {
+      animation: animating 2s infinite;
+    }
+    .box.double-tap {
+      animation: animating 0.5s;
+    }
+    #log {
+      background-color: rgba(0,0,0,0.7);
+      color: white;
+      padding: 10px;
+      font-size: 12px;
+      max-height: 200px;
+      overflow-y: auto;
+    }
+    #log p {
+      margin: 0;
+    }
+    .button-container {
+      width: 100%;
+      position: absolute;
+      left: 0;
+      bottom: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+    .action-button {
+      background-color: #aaa;
+      color: white;
+      border-radius: 10px;
+    }
+    .action-button.on {
+      background-color: blue;
+    }
+    @keyframes animating {
+      0% {
+        background-color: red;
+      }
+      50% {
+        background-color: blue;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h2>multi touch</h2>
+    <div id="container1" class="container">
+      <div id="box1" class="box" data-draggable="true"></div>
+      <div id="box2" class="box" data-draggable="true"></div>
+      <div class="button-container">
+        <button class="action-button" data-action="pinchZoom">pinchZoom</button>
+        <button class="action-button" data-action="rotate">rotate</button>
+      </div>
+    </div>
+
+  <div id="log">
+    <p>
+      <b>action type:</b> <span class="action-type"></span>
+    </p>
+    <p>
+      <b>event type:</b> <span class="event-type"></span>
+    </p>
+    <p>
+      <b>length:</b> <span class="length"></span>
+    </p>
+    <p>
+      <b>touches:</b> <span class="touches"></span>
+    </p>
+    <p>
+      <b>distance:</b> <span class="distance"></span>
+    </p>
+    <p>
+      <b>diff:</b> <span class="diff"></span>
+    </p>
+    <p>
+      <b>angle:</b> <span class="angle"></span>
+    </p>
+    <p>
+      <b>error:</b> <span class="error"></span>
+    </p>
+    <p>
+      <b>rotate:</b> <span class="rotate"></span>
+    </p>
+  </div>
+  </main>
+
+  <script>
+    const body = document.querySelector('body');
+    const log = document.getElementById('log');
+    const box = document.getElementById('box');
+    const container = document.getElementsByClassName('container')[0];
+
+    let logEvents = false;
+    let eventCache = null;
+    let currentActions = ['pinchZoom'];
+    let pressTime = null;
+
+    currentActions.forEach(action => {
+      document.querySelector(`button[data-action="${action}"]`).classList.add('on');
+    });
+    
+    // --------------------------------------------------------------------------
+    // helper
+    const printLog = (event) => {
+      if(!event) return;
+
+      const touches = event.touches ? Array.from(event.touches) : [];
+      log.querySelector('.action-type').innerText = currentActions.join(', ');
+      log.querySelector('.event-type').innerText = event.type;
+      log.querySelector('.length').innerText = touches.length;
+      log.querySelector('.touches').innerText = touches.map(touch => `${touch.clientX?.toFixed(2)}, ${touch.clientY?.toFixed(2)}`).join('\n');
+    }
+
+    const getRotationFromCSS = (element) => {
+        const style = window.getComputedStyle(element);
+        const transform = style.getPropertyValue('transform') || 
+                          style.getPropertyValue('-webkit-transform') || 
+                          style.getPropertyValue('-moz-transform');
+        
+        if (transform && transform !== 'none') {
+            const values = transform.split('(')[1].split(')')[0].split(',');
+            const a = values[0];
+            const b = values[1];
+            const angle = Math.round(Math.atan2(b, a) * (180 / Math.PI));
+            return angle;
+        }
+        
+        return 0;
+    }
+
+    const getStyle = (element) => {
+      const {left, top, right, bottom, ...rest} = window.getComputedStyle(element);
+      return {left: parseInt(left), top: parseInt(top), right: parseInt(right), bottom: parseInt(bottom), ...rest};
+    }
+
+    const isDoubleTap = (el) => {
+      const lastTouch = el.dataset.lastTouch;
+      if(!lastTouch) return false;
+
+      const now = new Date().getTime();
+      const delta = now - lastTouch;
+      if (delta < 80 && delta > 0) {
+        el.classList.add('double-tap');
+        setTimeout(() => {
+          el.classList.remove('double-tap');
+        }, 500);
+        return true;
+      }
+      return false;
+    }
+
+    // --------------------------------------------------------------------------
+    // event handler configuration
+    const start = (event) => {
+      if(!event || event.touches.length === 0) return;
+      printLog(event);
+      eventCache = event;
+      event.target.dataset.lastTouch = new Date().getTime();
+
+      if(event.touches.length === 1) {
+        longPress(event);
+      }
+      if(event.touches.length === 3) {
+        onThreePointer(event);
+      }
+      if(event.touches.length === 4) {
+        onFourPointer(event);
+      }
+    }
+    
+    const move = (event) => {
+      if(!event || event.touches.length === 0) return;
+      try {
+        if(event.touches.length === 1 || event.touches.length === 3) {
+          drag(event);
+        }
+        if (event.touches.length === 2) {
+          if(currentActions.includes('pinchZoom')) {
+            pinchZoom(event);
+          }
+          if(currentActions.includes('rotate')) {
+            rotate(event);
+          }
+        }
+      } catch (e) {
+        log.querySelector('.error').innerText = e.message;
+      }
+      
+      printLog(event);
+      eventCache = event;
+    }
+    
+    const end = (event) => {
+      if(!event || event.touches.length === 0) return;
+      printLog(eventCache);
+      eventCache = null;     
+
+      if(pressTime) {
+        clearTimeout(pressTime);
+      }
+
+      if (isDoubleTap(event.target)) {
+        console.log('double tap');
+      }
+    }
+
+    const setHandlers = (id) => {
+      const el = document.getElementById(id);
+      el.ontouchstart = start;
+      el.ontouchmove = move;
+      el.ontouchend = end;
+    }
+
+    const init = () => {
+      const body = document.querySelector('main');
+      body.ontouchstart = (event) => {
+        event.preventDefault();
+      }
+      const draggable = document.querySelectorAll('[data-draggable="true"]');
+      draggable.forEach(el => {
+        setHandlers(el.id);
+      });
+    }
+    
+    init();
+
+    // --------------------------------------------------------------------------
+    /**
+     * Multi-Touch Functionality
+     * */
+    // handle 1 Pointer 
+    const longPress = (event) => {
+      if(pressTime) {
+        clearTimeout(pressTime);
+        event.target.classList.remove('long-press');
+      } 
+      pressTime = setTimeout(() => {
+        event.target.classList.add('long-press');
+      }, 3000);
+    }
+
+    const drag = (event) => {
+      if(eventCache === null) return;
+      try{
+        const touch = Array.from(event.touches)[0];
+        const diffX = touch.clientX - eventCache.touches[0].clientX;
+        const diffY = touch.clientY - eventCache.touches[0].clientY;
+        log.querySelector('.diff').innerText = diffX + ', ' + diffY;
+        
+        const {top, left} = getStyle(event.target);
+
+        event.target.style.top = `${top + diffY}px`;
+        event.target.style.left = `${left + diffX}px`;
+      } catch(e) {
+        log.querySelector('.error').innerText = "[error][drag] " + e.message;
+      }
+    }
+
+    const copy = (event) => {
+      try{
+        const copyId = event.target.id.includes('copy') ? event.target.id.split('-copy')[0] + '-copy' + (parseInt(event.target.id.split('-copy')[1]) + 1) : event.target.id + '-copy1';
+        
+        const style = getStyle(event.target);
+        const copiedElement = event.target.cloneNode(true);
+        copiedElement.style.backgroundColor = style.backgroundColor;
+        copiedElement.id = copyId;
+        copiedElement.style.left = style.left + 'px';
+        copiedElement.style.top = style.top + 'px';
+
+        container.appendChild(copiedElement);
+        setHandlers(copyId);
+      } catch(e) {
+        log.querySelector('.error').innerText = "[error][copy] " + e.message;
+      }
+    }
+
+    // handle 2 Pointer ----------------------------------------------------------
+    const pinchZoom = (event) => {
+      const touches = Array.from(event.touches);
+      const touch1 = touches[0];
+      const touch2 = touches[1];
+
+      const distance = Math.sqrt(Math.pow(touch1.clientX - touch2.clientX, 2) + Math.pow(touch1.clientY - touch2.clientY, 2));
+      log.querySelector('.distance').innerText = distance;
+
+      const prevDistance = Math.sqrt(Math.pow(eventCache.touches[0].clientX - eventCache.touches[1].clientX, 2) + Math.pow(eventCache.touches[0].clientY - eventCache.touches[1].clientY, 2));
+
+      const diff = distance - prevDistance;
+      log.querySelector('.diff').innerText = diff;
+
+      let scale = 1 + diff / 100;
+      const width = event.target.clientWidth;
+      const height = event.target.clientHeight;
+
+      const widthScale = Math.floor(width * scale);
+      const heightScale = Math.floor(height * scale);
+
+      const minTrashhold = 16;
+      const maxTrashhold = container.clientWidth;
+
+      if(widthScale >= minTrashhold && heightScale >= minTrashhold && widthScale <= maxTrashhold) {
+        event.target.style.width = `${widthScale}px`;
+        event.target.style.height = `${heightScale}px`;
+        event.target.innerText = `${widthScale}, ${heightScale}`;
+      }
+    }
+
+    const rotate = (event) => {
+      const touches = Array.from(event.touches);
+      const touch1 = touches[0];
+      const touch2 = touches[1];
+
+      const angle = Math.atan2(touch2.clientY - touch1.clientY, touch2.clientX - touch1.clientX);
+      log.querySelector('.angle').innerText = angle;
+
+      const rotate = getRotationFromCSS(event.target);
+      const newRotation = rotate + 1;
+      event.target.style.transform = `rotate(${newRotation}deg)`
+    }
+
+    // handle 3 Pointer ----------------------------------------------------------
+    const onThreePointer = (event) => {
+    }
+    
+    // handle 4 Pointer ----------------------------------------------------------
+    const onFourPointer = (event) => {
+    }
+
+    // --------------------------------------------------------------------------
+    // button event
+    const actionButtons = document.querySelectorAll('.action-button');
+    Array.from(actionButtons).forEach(button => {
+      button.ontouchend = (e) => e.stopPropagation();
+      button.ontouchstart = (e) => e.stopPropagation();
+      
+      button.addEventListener('pointerdown', (event) => {
+        if(currentActions.includes(button.dataset.action)) {
+          currentActions = currentActions.filter(action => action !== button.dataset.action);
+          button.classList.remove('on');
+        } else {
+          currentActions.push(button.dataset.action);
+          button.classList.add('on');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
