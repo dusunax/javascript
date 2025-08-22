@@ -10,6 +10,12 @@
 
 ---
 
+## 지식 공유
+
+[타입스크립트 마이그레이션](https://github.com/dusunax/javascript/blob/main/ppts/typescript/250819_typescript-migration.pdf)
+
+---
+
 ## Book Study
 
 #### 이펙티브 타입스크립트: 2024년 5월 12일 ~ 6월 30일
